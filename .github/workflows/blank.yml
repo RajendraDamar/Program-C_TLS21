@@ -1,0 +1,167 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int jenis,caraF,jumlahK,jumlahH,berat,tahun,jumlah,jenisM,cara;
+    cout<<"KALKULATOR ZAKAT\n";
+    cout<<"================\n";
+    cout<<"Mau membayar zakat apa? (1.Fitrah 2.Maal) : ";
+    cin >>jenis;
+
+    switch(jenis){
+    case 1:
+        cout<<"\nMau membayar dengan apa? (1.Makanan Pokok 2.Uang) : ";
+        cin >>caraF;
+        
+        switch(caraF){
+            
+            case 1:
+            cout<<"\nMasukkan jumlah keluarga : ";
+            cin >>jumlahK;
+            cout<<"\n"<<(jumlahK*2.5)<<" kg";
+            break;
+            
+            case 2:
+            cout<<"\nMasukkan jumlah keluarga : ";
+            cin >>jumlahK;
+            cout<<"\n";
+            cout<<"Rp "<<(jumlahK*40000);
+            break;
+        }
+    break;
+    
+    case 2:
+        cout<<"\n1.Harta Kekayaan\n2.Emas\n3.Perak\n4.Binatang Ternak\n5.Hasil Pertanian\n6.Harta Karun";
+        cout<<"\nMau membayar yang mana : ";
+        cin >>jenisM;
+        
+        switch(jenisM){
+        case 1:
+            cout<<"\nApakah sudah lebih dari setahun? (1.ya 2.tidak) : ";
+            cin >>tahun;
+            
+            switch(tahun){
+                
+                case 1:
+                cout<<"\nMasukkan jumlah harta (Dalam rupiah) : ";
+                cin >>jumlahH;
+                cout<<"Rp "<<(0.025*jumlahH);
+                break;
+                
+                case 2:
+                cout<<"\nAnda tidak perlu membayar zakat :D";
+                break;
+            }
+        break;
+        
+        case 2:
+            cout<<"\nBerapa berat emas? (1.lebih dari 85 gr 2.kurang dari 85 gr) : ";
+            cin >>berat;
+            
+            switch(berat){
+                
+                case 1:
+                cout<<(0.025*berat)<<" gr";
+                break;
+                
+                case 2:
+                cout<<"\nAnda tidak perlu membayar zakat :D";
+                break;
+            }
+        break;
+        
+        case 3:
+            cout<<"\nBerapa berat perak? (1.berat>119 Kg 2.berat<119 Kg) : ";
+            cin >>berat;
+            
+            switch(berat){
+                case 1:
+                cout<<(0.025*berat)<<" gr";
+                break;
+                
+                case 2:
+                cout<<"\nAnda tidak perlu membayar zakat :D";
+                break;
+            }
+        break;
+        
+        case 4:
+            cout<<"\nBinatang apa? (1.Kambing 2.Sapi) : ";
+            cin >>jenis;
+            
+            switch(jenis){
+                case 1:
+                cout<<"\nBerapa banyak kambing (1.30<jumlah<40 2.jumlah>40) : ";
+                cin >>jumlah;
+                
+                switch(jumlah){
+                    case 1:
+                    cout<<"\nhaul 1 tahun, kadar zakat, 1 ekor umur 1 tahun";
+                    break;
+                    
+                    case 2:
+                    cout<<"\nhaul 1 tahun, kadar zakat, 1 ekor umur 2 tahun";
+                    break;
+                }
+                break;
+                
+                case 2:
+                cout<<"\nBerapa banyak sapi (1.40<jumlah<120 2.121<jumlah<200) : ";
+                cin >>jumlah;
+                
+                switch(jumlah){
+                    case 1:
+                    cout<<"\nhaul 1 tahun, kadar zakat 1 ekor umur 1 tahun";
+                    break;
+                    
+                    case 2:
+                    cout<<"\nhaul 1 tahun, kadar zakat 2 ekor";
+                    break;
+                }
+                break;
+            }
+        }
+        break;
+        
+        case 5:
+            cout<<"\nBerapa banyak hasil taninya? (1.jumlah>900 2.jumlah<900) : ";
+            cin >>jenis;
+            
+            switch(jenis){
+                case 1:
+                cout<<"\nPengairan dengan apa? (1.penyiraman 2.air hujan) : ";
+                cin >>cara;
+                
+                switch(cara){
+                    case 1:
+                    cout<<"\nJumlah hasil tani (Dalam Kg) : ";
+                    cin >>jumlah;
+                    cout<<(0.05*jumlah)<<" Kg";
+                    break;
+                    
+                    case 2:
+                    cout<<"\nJumlah hasil tani (Dalam Kg) : ";
+                    cin >>jumlah;
+                    cout<<(0.1*jumlah)<<" Kg";
+                    break;
+                }
+                break;
+                
+                case 2:
+                cout<<"\nAnda tidak perlu membayar zakat :D";
+                break;
+            }
+        break;
+        
+        case 6:
+            cout<<"\nMasukkan jumlah harta (Dalam Rupiah) : ";
+            cin >>jumlah;
+            cout<<(0.2*jumlah);
+        break;
+        
+    break;
+    } 
+    return 0;
+}
